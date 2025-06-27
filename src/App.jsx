@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/productList-inforce">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -20,7 +20,7 @@ export default function ProductCard({ product, onDelete, onEdit }) {
         <p>
           Size: {product.width} x {product.height}
         </p>
-        <p>Weight: {product.weight} g</p>
+        <p>Weight: {product.weight} grams</p>
       </div>
       <div className="product-actions">
         <Link to={`/products/${product.id}`} className="view-btn">

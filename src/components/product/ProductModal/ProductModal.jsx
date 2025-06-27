@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "./ProductModal.css";
 import styles from "./ProductModal.module.css";
 
 export default function ProductModal({ onSave, onCancel, initialData }) {
@@ -70,15 +69,15 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
   };
 
   return (
-    <div className="modal-backdrop">
-      <div className="modal">
+    <div className={styles["modal-backdrop"]}>
+      <div className={styles.modal}>
         <h2>{initialData ? "Edit Product" : "Add New Product"}</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="section-separator" />
-          <label className="input-label">
+        <form onSubmit={handleSubmit} className={styles.modalForm}>
+          <div className={styles.sectionSeparator} />
+          <label className={styles.inputLabel}>
             Image: enter a URL or upload from your computer
           </label>
-          <div className="image-input-row">
+          <div className={styles.imageInputRow}>
             <input
               type="text"
               name="imageUrl"
@@ -95,7 +94,7 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
               className={styles.imagePreview}
             />
           )}
-          <label className="input-label" htmlFor="name">
+          <label className={styles.inputLabel} htmlFor="name">
             Product Name
           </label>
           <input
@@ -107,7 +106,7 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
             onChange={handleChange}
             required
           />
-          <label className="input-label" htmlFor="count">
+          <label className={styles.inputLabel} htmlFor="count">
             Count
           </label>
           <input
@@ -120,8 +119,8 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
             min="0"
             required
           />
-          <label className="input-label">Size</label>
-          <div className="size-group">
+          <label className={styles.inputLabel}>Size</label>
+          <div className={styles.sizeGroup}>
             <input
               type="number"
               name="width"
@@ -130,9 +129,9 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
               onChange={handleChange}
               min="0"
               required
-              className="size-input"
+              className={styles.sizeInput}
             />
-            <span className="size-x">x</span>
+            <span className={styles.sizeX}>x</span>
             <input
               type="number"
               name="height"
@@ -141,10 +140,10 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
               onChange={handleChange}
               min="0"
               required
-              className="size-input"
+              className={styles.sizeInput}
             />
           </div>
-          <label className="input-label" htmlFor="weight">
+          <label className={styles.inputLabel} htmlFor="weight">
             Weight (g)
           </label>
           <input
@@ -157,12 +156,16 @@ export default function ProductModal({ onSave, onCancel, initialData }) {
             min="0"
             required
           />
-          {error && <div className="modal-error">{error}</div>}
-          <div className="modal-actions">
-            <button type="submit">
+          {error && <div className={styles.modalError}>{error}</div>}
+          <div className={styles.modalActions}>
+            <button className={styles.modalBtnSbm} type="submit">
               {initialData ? "Save Changes" : "Confirm"}
             </button>
-            <button type="button" onClick={onCancel} className="cancel-btn">
+            <button
+              type="button"
+              onClick={onCancel}
+              className={styles.modalBtnCancel}
+            >
               Cancel
             </button>
           </div>

@@ -21,6 +21,50 @@
 .modal h2 {
   margin-top: 0;
 }
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.modal-form {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalBtnSbm {
+  background: #2d547b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.modalBtnSbm:hover {
+  background: #1565c0;
+}
+
+.modalBtnCancel {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.modalBtnCancel:hover {
+  background: #bdbdbd;
+}
+
 .modal input {
   display: block;
   width: 100%;
@@ -90,4 +134,51 @@
   max-width: 100px;
   margin-bottom: 8px;
   display: block;
+}
+
+.createForm {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 28px 32px;
+  margin: 32px auto 0 auto;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.createFormTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.createFormActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.createFormError {
+  color: #e53935;
+  margin-bottom: 8px;
+  font-size: 0.97rem;
+  text-align: center;
+}
+.createFormInputRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.createFormLabel {
+  min-width: 90px;
+  font-weight: 500;
+}
+.createFormInput {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }

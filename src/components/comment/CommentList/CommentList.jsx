@@ -1,7 +1,8 @@
 import styles from "./CommentList.module.css";
 
 export default function CommentList({ comments }) {
-  if (!comments.length) return <div>No comments yet.</div>;
+  if (!Array.isArray(comments) || !comments.length)
+    return <div>No comments yet.</div>;
   return (
     <ul className={styles.commentList}>
       {comments.map((c) => (
